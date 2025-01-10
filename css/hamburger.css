@@ -1,0 +1,83 @@
+
+.hamburger {
+    --rotate-time: .15s;
+    --move-time: .1s;
+
+    width: 60px;
+    height: 45px;
+    display: inline-block;
+    position: relative;
+}
+
+div:has(>.hamburger) {
+    display: none;
+}
+  
+.hamburger span {
+    position: absolute;
+    height: 9px;
+    background: #000000;
+    border-radius: 4.5px;
+    left: 0;
+    width: 100%;
+    transform: rotate(0deg);
+    transform-origin: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    .hamburger span {
+        background: #FFFFFF;
+    }
+}
+
+.hamburger span:nth-child(1) { 
+    top: 0px; 
+    transition: top ease-in-out var(--move-time) var(--rotate-time), 
+                transform var(--rotate-time);
+}
+
+.hamburger span:nth-child(2) { 
+    top: 18px; 
+    transition: visibility 0s var(--rotate-time); }
+  
+.hamburger span:nth-child(3) { 
+    bottom: 0px; 
+    transition: bottom ease-in-out var(--move-time) var(--rotate-time), 
+                transform var(--rotate-time);
+}
+
+
+
+@media screen and (max-width: 669.999px) {
+    div:has(>.hamburger) {
+        display: initial;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 18px;
+        transition: top ease-in-out var(--move-time), 
+                    transform var(--rotate-time) var(--move-time);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        visibility: hidden;
+        transition: visibility 0s var(--move-time);
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        bottom: 18px;
+        transition: bottom ease-in-out var(--move-time), 
+                    transform var(--rotate-time) var(--move-time);
+    }
+    .hamburger-nav.active {
+        height: auto;
+    }
+
+    .hamburger-nav {
+        height: 0;
+        overflow: hidden;
+    }
+}
+

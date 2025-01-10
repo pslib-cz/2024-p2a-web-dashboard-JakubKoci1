@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico">
+    <title>Sensor Dashboard</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="./scripts/hamburger.js"></script>
+    <script src="./scripts/charts.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <nav class="dashboard__header">
+            <div class="header__name">
+                <p>PSLIB IoT Dashboard</p>
+            </div>
+            <menu class="header__buildings hamburger-nav hamburger-zone">
+                <li><a href="." class="link link--block link--active">Dům</a></li>
+                <li><a href="." class="link link--block">Garáž</a></li>
+                <li><a href="." class="link link--block">Zahrada</a></li>
+            </menu>
+            <div class="header__date">
+                <p>3.1.2025, 17:25</p>
+            </div>
+            <div>
+                <a href="javascript:void(0)" class="hamburger hamburger-btn hamburger-zone" role="button"
+                    aria-label="menu toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </nav>
+
+        <section class="dashboard__nav">
+            <menu class="dashboard__menu">
+                <li class="dashboard__link dashboard__link--active"><a class="link icon icon--home" href="."><span
+                            class="menu__content">Hlavní panel</span></a></li>
+                <li class="dashboard__link"><a href="." class="link icon icon--bell"><span
+                            class="menu__content">Oznámení</span><span class="notification">2</span></a></li>
+                <li class="dashboard__link"><a href="." class="link icon icon--podcast"><span 
+                    class="menu__content">Moje zařízení</span></a></li>
+                <li class="dashboard__link"><a href="." class="link icon icon--cog"><span
+                            class="menu__content">Nastavení</span></a></li>
+            </menu>
+        </section>
+
+        <section class="dashboard__main">
+
+        </section>
+    </div>
+</body>
+</html>

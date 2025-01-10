@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?ieavg2');
+  src: url('../fonts/icomoon.eot?ieavg2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ieavg2') format('truetype'),
+    url('../fonts/icomoon.woff?ieavg2') format('woff'),
+    url('../fonts/icomoon.svg?ieavg2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon::before {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: inline-block;
+}
+
+[class*="icon--"]:hover::before {
+
+}
+
+.icon--block::before {
+  display: block;
+  margin-bottom: var(--gap, 0.5em);
+}
+
+.icon--big::before {
+  font-size: 2em;
+}
+
+.icon--red::before {
+  color: red;
+}
+.icon--green::before {
+  color: green;
+}
+
+.icon--home::before {
+  content: "\e902";
+}
+
+.icon--podcast::before {
+  content: "\e91c";
+}
+
+.icon--bell::before {
+  content: "\e951";
+}
+
+.icon--lock::before {
+  content: "\e98f";
+}
+
+.icon--unlocked::before {
+  content: "\e990";
+}
+
+.icon--cog::before {
+  content: "\e994";
+}

@@ -1,0 +1,62 @@
+@layer reset, init, layout, components, design;
+
+@import url(normalize.css) layer(reset);
+@import url(typography.css) layer(init);
+@import url(layout.css) layer(layout);
+@import url(student.css) layer(design);
+@import url(hamburger.css) layer(components);
+
+@layer init {
+    :root {
+        color-scheme: light;
+        --background: #ffffff;
+        --primary: #358538;
+        --secondary: #c1cce2;
+        --hover: #388e3c;
+        --chart-font-color: #000000;
+        --chart-point-color: #ffffff;
+        --active: var(--background);
+
+        --gap: 0.5em;
+    }
+
+    /* Dark mode – v devtools Ctrl + Shift + P = vyhledat scheme a emulovat na dark */
+    @media (prefers-color-scheme: dark) {
+        :root {
+            color-scheme: dark;
+            --background: #242424;
+            --primary: #0e4710;
+            --secondary: #0a2711;
+            --hover: #3e6d40;
+            --chart-font-color: #ffffff;
+            --chart-point-color: #000000;
+            --active: #5dd463;
+        }
+    }
+
+    html {
+        font-family: "Roboto", sans-serif;
+        background-color: var(--background);
+    }
+
+    .link {
+        color: inherit;
+        text-decoration: none;
+        display: flex;
+        gap: var(--gap, 0.5em);
+        padding: var(--gap, 0.5em);
+    }
+
+    .link--block {
+        display: block;
+        padding: var(--gap, 0.5em);
+        border-radius: 0.2em;
+    }
+
+    .link--block:hover {
+        background-color: var(--hover);
+    }
+
+    .link--active {
+        background-color: var(--background);
+    }
