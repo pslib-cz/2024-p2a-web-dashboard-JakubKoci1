@@ -1,0 +1,41 @@
+.dashboard__header{
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem;
+    position: relative;
+}
+.header__name > p{
+    font-weight: 900;
+    font-size: 2rem;
+    
+}
+.dashboard__menu{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    background-color: green;
+}
+.header__buildings{
+    position: absolute;
+    background-color: green;
+    left: 0px;
+    right: 0px;
+    top: 100%;
+    list-style: none;
+    left: -40px;
+}
+.notification{
+    border-radius: 25px;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    
+}
+.menu__content{
+    position: absolute;
+    top: -100000px;
+    left: -1000000px;
+}
