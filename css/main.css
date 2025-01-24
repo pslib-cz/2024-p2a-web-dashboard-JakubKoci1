@@ -61,3 +61,18 @@
         background-color: var(--background);
     }
 }
+.dashboard__header{
+    background-color: var(--primary);
+}
+.dashboard__menu{
+    background-color: var(--primary);
+}
+.panel{
+    background-color: var(--secondary);
+}
+.dashboard__nav{
+    background-color: var(--primary);
+}
+.dashboard__main{
+    background-color: var(--background);
+}
